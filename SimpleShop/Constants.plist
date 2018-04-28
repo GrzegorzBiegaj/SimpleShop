@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MaxProductAmount</key>
+	<integer>10</integer>
+	<key>DefaultCurrency</key>
+	<string>USD</string>
+	<key>JsonratesKey</key>
+	<string>79f5f300344327e6f02a38b89e80e382</string>
+</dict>
+</plist>
