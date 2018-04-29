@@ -101,7 +101,6 @@ class BasketVC: UIViewController {
 
     fileprivate func deleteAll() {
         viewModel.removeAll()
-        viewModel.refreshData()
         tableView.reloadData()
         totalPriceLabel.text = viewModel.getTotalPrice()
     }

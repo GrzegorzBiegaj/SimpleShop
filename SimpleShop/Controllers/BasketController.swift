@@ -64,7 +64,7 @@ class BasketController: BasketControllerProtocol {
     }
 
     func removeAll() {
-        storage.clearAll()
+        storage.clear(Basket.self)
     }
 
     func calculateBasket(currency: Currency) -> Float {
