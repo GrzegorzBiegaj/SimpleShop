@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262AF29720AEC6E7005C9675 /* Float+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AF29620AEC6E7005C9675 /* Float+Currency.swift */; };
 		263EACF1208E84FF00632EF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263EACF0208E84FF00632EF8 /* AppDelegate.swift */; };
 		263EACF8208E850400632EF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263EACF7208E850400632EF8 /* Assets.xcassets */; };
 		263EACFB208E850400632EF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263EACF9208E850400632EF8 /* LaunchScreen.storyboard */; };
@@ -81,6 +82,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		262AF29620AEC6E7005C9675 /* Float+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Currency.swift"; sourceTree = "<group>"; };
 		263EACED208E84FF00632EF8 /* SimpleShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		263EACF0208E84FF00632EF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		263EACF7208E850400632EF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				263EAD6A208FD96800632EF8 /* UIViewController+Alerts.swift */,
+				262AF29620AEC6E7005C9675 /* Float+Currency.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				263EAD56208F06E300632EF8 /* CurrencyListInterpreter.swift in Sources */,
 				263EACF1208E84FF00632EF8 /* AppDelegate.swift in Sources */,
 				263EAD4E208F061B00632EF8 /* InterpreterProtocol.swift in Sources */,
+				262AF29720AEC6E7005C9675 /* Float+Currency.swift in Sources */,
 				263EAD66208F60A900632EF8 /* BasketController.swift in Sources */,
 				26CB4DE72094464F003C5D07 /* Products.swift in Sources */,
 				263EAD53208F063C00632EF8 /* PListStorage.swift in Sources */,

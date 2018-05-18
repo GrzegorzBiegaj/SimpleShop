@@ -17,7 +17,7 @@ class ProductTests: XCTestCase {
         let product3 = Product(name: "abcd", description: "efgh", quantity: "1l", packageType: .bottle, price: 2.34, imageName: "aa")
         let currency = Currency(name: "USD", rate: 1.33)
 
-        XCTAssertEqual(product.getPriceString(currency: currency), "3.11 $")
+        XCTAssertEqual(product.getPriceString(currency: currency), "$3.11")
         XCTAssertFalse(product == product2)
         XCTAssertFalse(product2 == product3)
     }

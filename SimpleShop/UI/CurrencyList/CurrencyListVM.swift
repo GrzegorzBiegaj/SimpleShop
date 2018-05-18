@@ -58,7 +58,7 @@ class CurrencyListVM {
         return "Network error: \(error)"
     }
     
-    // MARK: Privat
+    // MARK: Private
 
     // Top 10 currencies
     fileprivate let arrayToFiler = ["USD", "EUR", "JPY", "GBP", "CHF", "CAD", "AUD", "NZD", "ZAD", "CNY"]
@@ -68,6 +68,6 @@ class CurrencyListVM {
         if case .top10 = type {
             filteredMap = currencyList.filter { arrayToFiler.contains($0.name) }
         }
-        return filteredMap.map { ShowCurrency(shownName: "\($0.name) \(String(describing: $0.name != $0.symbol ? "(" + $0.symbol + ")" : ""))" ,currency: $0) }
+        return filteredMap.map { ShowCurrency(shownName: "\($0.name)" ,currency: $0) }
     }
 }

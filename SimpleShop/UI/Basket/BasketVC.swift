@@ -15,7 +15,7 @@ class BasketVC: UIViewController {
 
     var currency: Currency? {
         didSet {
-            basketCurrencyVC?.currency = currency?.symbol
+            basketCurrencyVC?.currency = currency?.name
             viewModel.refreshData()
             tableView.reloadData()
             totalPriceLabel.text = viewModel.getTotalPrice()

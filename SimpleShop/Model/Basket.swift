@@ -20,8 +20,8 @@ struct Basket {
 extension BasketItem {
 
     func getPriceTotalString(currency: Currency) -> String {
-        let str = NSString(format: "%.2f %@", product.price * Float(amount) * currency.rate, currency.symbol)
-        return String(str)
+        let totalPrice = product.price * Float(amount) * currency.rate
+        return totalPrice.currency(code: currency.name)
     }
 }
 

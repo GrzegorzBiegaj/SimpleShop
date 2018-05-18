@@ -70,8 +70,7 @@ class BasketVM {
     func getTotalPrice() -> String {
         let currency = currentCurrencyController.getCurrency
         let price =  basketController.calculateBasket(currency: currency)
-        let str = NSString(format: "%.2f %@", price, currency.symbol)
-        return String(str)
+        return price.currency(code: currency.name)
     }
 
     func updateCurrency(currency: Currency, closure: @escaping (CurrencyUpdateResponse) -> ()) {

@@ -41,9 +41,9 @@ class BasketVMTests: XCTestCase {
 
         let basketVM = BasketVM(basketController: basketController, constantsController: constantsController, currentCurrencyController: currentCurrencyController, currencyListController: currencyListController)
 
-        XCTAssertEqual(basketVM.getTotalPrice(), "42.12 $")
+        XCTAssertEqual(basketVM.getTotalPrice(), "$42.12")
         currentCurrencyController.currentCurrency = Currency(name: "XXX", rate: 9.99)
-        XCTAssertEqual(basketVM.getTotalPrice(), "420.78 XXX")
+        XCTAssertEqual(basketVM.getTotalPrice(), "XXX420.78")
     }
 
     func testFindIndex() {

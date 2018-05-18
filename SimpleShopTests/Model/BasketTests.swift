@@ -29,7 +29,7 @@ class BasketTests: XCTestCase {
         let basketItem2 = BasketItem(product: product, amount: 5)
         let currency = Currency(name: "EUR", rate: 0.99)
 
-        XCTAssertEqual(basketItem.getPriceTotalString(currency: currency), "11.58 €")
+        XCTAssertEqual(basketItem.getPriceTotalString(currency: currency), "€11.58")
         XCTAssertTrue(basketItem == basketItem2)
     }
 

@@ -11,16 +11,6 @@ import Foundation
 struct Currency: Equatable {
     let name: String
     let rate: Float
-
-    var symbol: String {
-        switch name {
-        case "USD": return "$"
-        case "EUR": return "€"
-        case "GBP": return "£"
-        case "CNY": return "¥"
-        default: return name
-        }
-    }
 }
 
 struct CurrencyList: Decodable, Encodable, Equatable {

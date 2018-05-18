@@ -42,7 +42,6 @@ struct Product: Equatable {
 extension Product {
 
     func getPriceString(currency: Currency) -> String {
-        let str = NSString(format: "%.2f %@", price * currency.rate, currency.symbol)
-        return String(str)
+        return (price * currency.rate).currency(code: currency.name)
     }
 }

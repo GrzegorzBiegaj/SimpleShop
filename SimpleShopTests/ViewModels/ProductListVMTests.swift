@@ -26,10 +26,10 @@ class ProductListVMTests: XCTestCase {
 
         var showProducts = productListVM.showProducts
 
-        let showProduct1 = ShowProduct(product: products[0], amount: 1, shownPrice: "0.95 $", maxAmount: ConstantsControllerMock().maxProductAmount)
-        let showProduct2 = ShowProduct(product: products[1], amount: 1, shownPrice: "2.10 $", maxAmount: ConstantsControllerMock().maxProductAmount)
-        let showProduct3 = ShowProduct(product: products[2], amount: 1, shownPrice: "1.30 $", maxAmount: ConstantsControllerMock().maxProductAmount)
-        let showProduct4 = ShowProduct(product: products[3], amount: 1, shownPrice: "0.73 $", maxAmount: ConstantsControllerMock().maxProductAmount)
+        let showProduct1 = ShowProduct(product: products[0], amount: 1, shownPrice: "$0.95", maxAmount: ConstantsControllerMock().maxProductAmount)
+        let showProduct2 = ShowProduct(product: products[1], amount: 1, shownPrice: "$2.10", maxAmount: ConstantsControllerMock().maxProductAmount)
+        let showProduct3 = ShowProduct(product: products[2], amount: 1, shownPrice: "$1.30", maxAmount: ConstantsControllerMock().maxProductAmount)
+        let showProduct4 = ShowProduct(product: products[3], amount: 1, shownPrice: "$0.73", maxAmount: ConstantsControllerMock().maxProductAmount)
 
         XCTAssertEqual(showProducts.count, 4)
         XCTAssertTrue(compare(showProduct1: showProducts[0], showProduct2: showProduct1))
