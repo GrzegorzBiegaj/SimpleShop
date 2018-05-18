@@ -13,7 +13,7 @@ struct Currency: Equatable {
     let rate: Float
 }
 
-struct CurrencyList: Decodable, Encodable, Equatable {
+struct CurrencyList: Codable, Equatable {
     let source: String
     let quotes: [String: Float]
 }
