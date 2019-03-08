@@ -144,7 +144,7 @@ class BasketControllerTests: XCTestCase {
         value += (4.77 * 4)
         value *= 1.65
 
-        XCTAssertEqual(String(basketController.calculateBasket(currency: currency)), String(value))
+        XCTAssertEqual(basketController.calculateBasket(currency: currency).rounded(.down), value.rounded(.down))
     }
 
 }
