@@ -31,7 +31,7 @@ class CurrencyListControllerTests: XCTestCase {
             switch response {
             case .success(let responseData):
                 XCTAssertEqual(responseData, currencyList)
-            case .error(_):
+            case .failure(_):
                 XCTFail()
             }
         }
@@ -49,7 +49,7 @@ class CurrencyListControllerTests: XCTestCase {
             switch response {
             case .success(_):
                 XCTFail()
-            case .error(let error):
+            case .failure(let error):
                 XCTAssertEqual(error, ResponseError.invalidResponseError)
             }
         }
@@ -66,7 +66,7 @@ class CurrencyListControllerTests: XCTestCase {
             switch response {
             case .success(_):
                 XCTFail()
-            case .error(let error):
+            case .failure(let error):
                 XCTAssertEqual(error, ResponseError.connectionError)
             }
         }

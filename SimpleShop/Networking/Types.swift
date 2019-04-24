@@ -10,11 +10,6 @@ import Foundation
 
 typealias RequestParameters = [String: Any]?
 
-enum Response<T, E: Error> {
-    case success(T)
-    case error(E)
-}
-
 enum HTTPMethod: String {
     case get = "GET"
     case put = "PUT"

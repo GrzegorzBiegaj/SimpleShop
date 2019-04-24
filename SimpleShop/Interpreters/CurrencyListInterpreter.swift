@@ -12,17 +12,17 @@ class CurrencyListInterpreter: InterpreterProtocol {
 
     // Mark: Public interface
     
-    func interpret(data: Data?, response: HTTPURLResponse?, error: Error?, successStatusCode: Int) -> Response<CurrencyList, ResponseError> {
+    func interpret(data: Data?, response: HTTPURLResponse?, error: Error?, successStatusCode: Int) -> Result<CurrencyList, ResponseError> {
 
-        if let _ = error { return Response.error(ResponseError.connectionError) }
+        if let _ = error { return Result.failure(ResponseError.connectionError) }
         guard response?.statusCode == successStatusCode else {
-            return Response.error(ResponseError.invalidResponseError)
+            return Result.failure(ResponseError.invalidResponseError)
         }
 
-        guard let data = data else { return Response.error(ResponseError.invalidResponseError) }
+        guard let data = data else { return Result.failure(ResponseError.invalidResponseError) }
         guard let response = try? JSONDecoder().decode(CurrencyList.self, from: data) else {
-            return Response.error(ResponseError.decodeError)
+            return Result.failure(ResponseError.decodeError)
         }
-        return Response.success(response)
+        return Result.success(response)
     }
 }

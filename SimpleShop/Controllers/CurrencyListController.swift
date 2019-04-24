@@ -10,7 +10,7 @@ import Foundation
 
 protocol CurrencyListControllerProtocol {
 
-    func currencyList(handler: @escaping (Response<CurrencyList, ResponseError>) -> ())
+    func currencyList(handler: @escaping (Result<CurrencyList, ResponseError>) -> ())
     
 }
 
@@ -26,7 +26,7 @@ class CurrencyListController: CurrencyListControllerProtocol {
         self.constantsController = constantsController
     }
 
-    func currencyList(handler: @escaping (Response<CurrencyList, ResponseError>) -> ()) {
+    func currencyList(handler: @escaping (Result<CurrencyList, ResponseError>) -> ()) {
 
         let request = CurrencyListRequest(key: constantsController.jsonratesKey)
         connection.performRequest(request: request) { (response) in
@@ -34,8 +34,8 @@ class CurrencyListController: CurrencyListControllerProtocol {
             switch response {
             case .success(let currencyList):
                 handler(.success(currencyList))
-            case .error(let error):
-                handler(.error(error))
+            case .failure(let error):
+                handler(.failure(error))
             }
         }
     }

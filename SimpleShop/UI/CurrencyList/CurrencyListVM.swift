@@ -44,7 +44,7 @@ class CurrencyListVM {
             case .success(let currencyList):
                 self.currency = currencyList.list
                 closure(CurrencyListResponse.success)
-            case .error(let error):
+            case .failure(let error):
                 closure(CurrencyListResponse.error(error))
             }
         }

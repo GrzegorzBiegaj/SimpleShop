@@ -144,8 +144,8 @@ extension BasketVC: UITableViewDelegate {
         return true
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        guard UITableViewCellEditingStyle.delete == editingStyle else { return }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard UITableViewCell.EditingStyle.delete == editingStyle else { return }
         deleteRow(indexPath: indexPath)
     }
 }

@@ -19,14 +19,14 @@ class CurrencyListControllerMock: CurrencyListControllerProtocol {
         self.responseError = responseError
     }
 
-    func currencyList(handler: @escaping (Response<CurrencyList, ResponseError>) -> ()) {
+    func currencyList(handler: @escaping (Result<CurrencyList, ResponseError>) -> ()) {
 
         if let currencyList = currencyList {
             handler(.success(currencyList))
         }
 
         if let responseError = responseError {
-            handler(.error(responseError))
+            handler(.failure(responseError))
         }
 
     }

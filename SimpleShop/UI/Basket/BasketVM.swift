@@ -82,7 +82,7 @@ class BasketVM {
                     return
                 }
                 closure(CurrencyUpdateResponse.success(currency))
-            case .error(let error):
+            case .failure(let error):
                 closure(CurrencyUpdateResponse.error(error))
             }
         }
